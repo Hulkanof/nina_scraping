@@ -34,11 +34,11 @@ def get_character_info(character_info : dict) -> None:
     html = html_bytes.decode("utf-8")
     file = html_to_json.convert(html)
     if character_info["name"] == "Snow White: Innocent Days":
-        character_info["img"] = "https://www.prydwen.gg/"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][1]["div"][1]["div"][1]["noscript"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]
+        character_info["img"] = "https://www.prydwen.gg"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][1]["div"][1]["div"][1]["noscript"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]
     elif "picture" not in file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][5]["div"][8]["noscript"][0]:
-        character_info["img"] = "https://www.prydwen.gg/"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][5]["div"][8]["noscript"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]
+        character_info["img"] = "https://www.prydwen.gg"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][5]["div"][8]["noscript"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]
     else:
-        character_info["img"] = "https://www.prydwen.gg/"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][5]["div"][8]["noscript"][0]["picture"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]    
+        character_info["img"] = "https://www.prydwen.gg"+file['html'][0]["body"][0]["div"][0]["div"][0]["div"][0]["div"][1]["div"][1]["div"][5]["div"][8]["noscript"][0]["picture"][0]["img"][0]["_attributes"]["srcset"].split(",")[2].split()[0]    
 
 def get_character_list(json) -> list[dict[str, str]]:
     character_list = []
