@@ -1,8 +1,5 @@
-from bs4 import BeautifulSoup
-import requests
 import html_to_json
 from urllib.request import urlopen
-import json 
 
 
 base_url = "https://www.prydwen.gg/nikke/characters/"
